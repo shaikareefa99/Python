@@ -1,0 +1,6 @@
+valuea=int(input("Enter number:"))
+valueb=input("Enter number:")
+valuec=float(input("Enter number:"))
+print(valuea)
+print(valueb)
+print(valuec)
