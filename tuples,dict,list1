@@ -1,0 +1,9 @@
+List=[94,"ameeshadev",08.2,True]
+print(List)
+tuples=(9,"areefa",93.4,False)
+print(tuples)
+dict={
+    "name":"ayesha",
+    "age":18
+}
+print(dict)
