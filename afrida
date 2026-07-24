@@ -1,0 +1,9 @@
+tuple={
+    "name":"afrida",
+    "age":19
+    }
+print(tuple)
+list=[9,"areefa",32.8,True]
+print(list)
+dict=(5,"ameesha",54,9,False)
+print(dict)
