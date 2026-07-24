@@ -1,0 +1,9 @@
+Enter=[10, "venky&areefa", 200.35, True]
+print(Enter)
+
+Dict={
+    "Name":"areefa&venky"
+}
+print(Dict)
+Tuples=(20,"ammulu&talliga",72.10,False)
+print(Tuples)
