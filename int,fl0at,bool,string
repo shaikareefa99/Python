@@ -1,0 +1,8 @@
+Entera=int(input("enetr value:"))
+Enterb=input("enter value:")
+Enterc=float(input("enter value:"))
+Enterd=bool(input("enter value:"))
+print(Entera)
+print(Enterb)
+print(Enterc)
+print(Enterd)
