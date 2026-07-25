@@ -1,0 +1,13 @@
+#ternary operators
+a=60
+b=50
+print(a>b and b<a)
+print(not(a>b and b<a))
+
+a=80
+b=40
+print(a>b and b<a)
+print(not(a>b and b<a))
+a=40
+b=20
+print(a<b or b>a)
