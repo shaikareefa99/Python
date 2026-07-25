@@ -1,0 +1,9 @@
+a=50
+b=30
+print(a+b)
+print(a-b)
+print(a*b)
+print(a%b)#module
+print(a/b)#division
+print(a//b)#floordivision
+print(a**b)#exponensioal
