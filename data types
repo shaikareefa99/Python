@@ -1,0 +1,17 @@
+list=[50.34,"areefa",30,"true"] 
+print(list)
+tuples=(20,"afrida",50.68,"false")
+print(tuples)
+dict={
+    "name":"ameesha",
+    "age":20
+}
+print(dict)
+int=(20,50,70,60)
+print(int)
+string=("ammulu","areefa")
+print(string)
+boolean=True
+print(boolean)
+float=(50.809)
+print(float)
