@@ -1,0 +1,179 @@
+# 🚀 AI Career Connect
+
+An AI-powered career advisor and interactive dashboard built using **Flask**, **SQLite**, **Mistral AI**, **Speech-to-Text (STT)**, and **Text-to-Speech (TTS)**.
+
+---
+
+## 📌 Project Overview
+
+**AI Career Connect** is a intelligent web platform designed to assist job seekers, students, and professionals in planning their career paths. By leveraging state-of-the-art Large Language Models via the **Mistral AI API** alongside voice interactivity and real-time analytics, users can analyze skill gaps, practice interview responses, receive resume feedback, and visualize their career progression.
+
+---
+
+## ✨ Key Features
+
+1. **🐍 Flask Modular Backend**: Built using the **Application Factory Pattern** and **Blueprints** for scalability and clean architecture.
+2. **🗄️ SQLite & SQLAlchemy ORM**: Secure database handling user accounts, career profiles, skills, and chat histories.
+3. **🤖 Mistral AI Integration**: Intelligent career recommendations, resume evaluation, and tailored learning path suggestions.
+4. **🎤 Speech-to-Text (STT)**: Record voice prompts directly in the chat interface using browser audio streams transcribed via Google Web Speech API / SpeechRecognition.
+5. **🔊 Text-to-Speech (TTS)**: Listen to AI career responses on demand with cloud (gTTS) and offline (pyttsx3) voice synthesis.
+6. **📊 Dynamic Interactive Dashboard**: Dynamic stats and data visualization powered by **Plotly** to track skills, experience, and past AI advisory sessions.
+7. **🎨 Modern Dark UI**: Sleek, responsive design built with CSS design tokens, smooth animations, and glassmorphism.
+
+---
+
+## 📂 Directory & Project Structure
+
+```text
+ai career connect/
+│
+├── run.py                          # Entry point to start the Flask server
+├── requirements.txt                # Python package dependencies
+├── .env                            # Environment variables (API keys, secret keys)
+├── .gitignore                      # Git exclusion rules
+├── README.md                       # Complete project documentation
+├── explanation.txt                 # In-depth architectural explanation
+│
+├── app/                            # Core Application Package
+│   ├── __init__.py                 # App factory (create_app)
+│   ├── config.py                   # Environment configuration (Dev, Test, Prod)
+│   ├── extensions.py               # Shared extension instances (db, migrate, login_manager)
+│   │
+│   ├── models/                     # SQLAlchemy Database Models
+│   │   ├── __init__.py
+│   │   ├── user.py                 # User authentication model
+│   │   ├── career.py               # CareerProfile & Skill models (Many-to-Many relationship)
+│   │   └── conversation.py         # Conversation & Message chat history models
+│   │
+│   ├── routes/                     # Application Routes & Blueprints
+│   │   ├── __init__.py
+│   │   ├── auth.py                 # Authentication routes (/login, /register, /logout)
+│   │   ├── dashboard.py            # Dynamic dashboard route (/dashboard)
+│   │   ├── career.py               # Profile management & chat view routes (/profile, /chat)
+│   │   └── api.py                  # REST API endpoints for Chat, STT, and TTS
+│   │
+│   ├── services/                   # Business Logic & Third-Party Integrations
+│   │   ├── __init__.py
+│   │   ├── mistral_service.py      # Mistral AI client & prompt helpers
+│   │   ├── speech_service.py       # Audio transcription (Speech-to-Text)
+│   │   ├── tts_service.py          # Audio generation (Text-to-Speech)
+│   │   └── career_service.py       # Profile CRUD & dashboard analytics computation
+│   │
+│   ├── templates/                  # Jinja2 HTML Templates
+│   │   ├── base.html               # Master layout with navigation and alerts
+│   │   ├── auth/                   # Login & registration views
+│   │   ├── dashboard/              # Dynamic dashboard view with Plotly charts
+│   │   └── career/                 # User profile editor & AI chat interface
+│   │
+│   ├── static/                     # Static Frontend Assets
+│   │   ├── css/
+│   │   │   └── main.css            # Dark theme CSS stylesheet with design tokens
+│   │   ├── js/
+│   │   │   ├── main.js             # Global utilities & auto-dismissing alerts
+│   │   │   └── chat.js             # Real-time chat, STT recorder, and TTS audio playback
+│   │   ├── audio/generated/        # Generated TTS MP3 audio outputs
+│   │   └── uploads/                # Temporary directory for uploaded audio files
+│   │
+│   └── utils/                      # Helper Functions & Decorators
+│       ├── __init__.py
+│       ├── decorators.py           # Custom API login requirements
+│       └── helpers.py              # File validation and upload helpers
+│
+├── tests/                          # Automated Pytest Suite
+│   ├── conftest.py                 # Fixtures for in-memory DB testing
+│   └── test_auth.py                # Smoke tests for authentication
+│
+└── instance/                       # SQLite Database storage (`ai_career_connect.db`)
+```
+
+---
+
+## 🛠️ Technology Stack
+
+- **Backend**: Python 3.10+, Flask 3.x, Flask-SQLAlchemy, Flask-Login, Flask-Migrate
+- **Database**: SQLite3
+- **AI Model**: Mistral AI (`mistral-large-latest`) via `mistralai` SDK
+- **Speech Modules**: `SpeechRecognition` (STT), `gTTS` / `pyttsx3` (TTS)
+- **Frontend**: Vanilla HTML5, CSS3 (CSS Variables, Flexbox/Grid), JavaScript (ES6+ Fetch API, MediaRecorder API)
+- **Data Visualization**: Plotly.js
+
+---
+
+## ⚡ Quick Start & Setup Guide
+
+### 1. Prerequisites
+Ensure you have Python 3.10 or higher installed.
+
+### 2. Clone / Open Project
+Navigate to the project root directory:
+```bash
+cd "c:/Users/Shaik Areefa/OneDrive/Desktop/ai career connect"
+```
+
+### 3. Create & Activate Virtual Environment
+- **Windows**:
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+- **macOS / Linux**:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+### 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Configure Environment Variables
+Create or update the `.env` file in the root directory:
+```env
+FLASK_APP=run.py
+FLASK_ENV=development
+SECRET_KEY=your-custom-secret-key
+
+# Mistral AI API Key
+MISTRAL_API_KEY=your-mistral-api-key
+
+# Database Configuration
+DATABASE_URL=sqlite:///ai_career_connect.db
+
+# Speech Settings
+SPEECH_LANGUAGE=en-US
+TTS_LANGUAGE=en
+```
+
+### 6. Run the Application
+```bash
+python run.py
+```
+
+Open your browser and navigate to:
+👉 **`http://127.0.0.1:5000`**
+
+---
+
+## 🔌 API Endpoints Summary
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `POST` | `/api/chat` | Send user prompt to Mistral AI & save history | Yes |
+| `POST` | `/api/speech-to-text` | Upload audio recording and convert to text | Yes |
+| `POST` | `/api/text-to-speech` | Convert response text into playable MP3 audio | Yes |
+
+---
+
+## 🧪 Running Tests
+
+To run the automated unit tests:
+```bash
+pytest
+```
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
