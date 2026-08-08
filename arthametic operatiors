@@ -1,0 +1,10 @@
+# Arthametic operators
+a=60
+b=30
+print(a+b)#addition
+print(a-b)#substractiob
+print(a*b)#multiplication
+print(a%b)#module
+print(a/b)#division
+print(a**b)#exponentional
+print(a//b)#floordivision
