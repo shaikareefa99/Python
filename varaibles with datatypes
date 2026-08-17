@@ -1,0 +1,6 @@
+x=int(4)
+print(x)
+y=str("areefa")
+print(y)
+z=float(48.45)
+print(z)
