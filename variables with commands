@@ -1,0 +1,13 @@
+x=5
+print(x)# x is the int
+name="dadiamma"
+print(name)#name is the string
+boolean=True
+print(boolean)#bool it defines the true or false
+float=37.89
+print(float)#float it defines the point after num
+dic={
+    "name":"areefa",
+    "age":20
+}
+print(type(dict))#DICTONARY is the define by the flower 
