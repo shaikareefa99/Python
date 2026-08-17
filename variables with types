@@ -1,0 +1,15 @@
+int=(type(45))
+print(int)
+string=(type("DADIAMMA"))
+print(string)
+float=(type(38.90))
+print(float)
+dict={
+    "name":"areefa",
+    "age":38
+}
+print(type(dict))
+bool=False
+print(type(bool))
+tuples=("ayesha",446,890.9,"True")
+print(type(tuples))
