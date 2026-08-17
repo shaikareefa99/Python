@@ -1,0 +1,10 @@
+name="areefa"
+print(name)
+lover="venky"
+print(lover)
+friend="renu"
+print(friend)
+gardien="granny"
+print(gardien)
+benchmate="affulu,karima,srividya,pavani"
+print(benchmate)
