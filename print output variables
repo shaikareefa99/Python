@@ -1,0 +1,6 @@
+x = "areefa is beauty  packet"
+print(x)
+y = "ayesha is my sis"
+print(y)
+z = "Dadiamma is my granny"
+print(z)
