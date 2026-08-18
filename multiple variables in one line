@@ -1,0 +1,4 @@
+x, y, z,   =  "banana ", "areefa" ,"cherry"
+print(x)
+print(y)
+print(z)
