@@ -1,0 +1,10 @@
+my_var="areefa"
+print(my_var)
+My_var="areefa"
+print(My_var)
+_My_Var="areefa"
+print(_My_Var)
+_myvar="areefa"
+print(_myvar)
+My_Var="areefa"
+print(My_Var)
