@@ -1,0 +1,9 @@
+print("DAY NUMBER", "DAY")
+print(1, "Monday")
+print(2, "Tuesday")
+print(3, "Wednesday")
+print(4, "Thursday")
+print(5, "Friday")
+print(6, "Saturday")
+print(7, "Sunday")
+
