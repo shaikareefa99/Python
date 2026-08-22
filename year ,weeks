@@ -1,0 +1,8 @@
+N = int(input())
+Y = N // 365
+R = N % 365
+W = R // 7 
+D = R % 7
+print(Y)
+print(W)
+print(D)
