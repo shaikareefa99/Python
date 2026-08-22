@@ -1,0 +1,4 @@
+list1 = ("amma","dadi","ayesha")
+list2 = (1,4,3)
+list3 = list1+list2
+print(list3)
