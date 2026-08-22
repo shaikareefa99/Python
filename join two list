@@ -1,0 +1,3 @@
+list1 =("areefa","ammulu")
+list2 =(1, 2)
+print(list1,list2)
