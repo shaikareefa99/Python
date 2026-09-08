@@ -1,0 +1,5 @@
+A = 20
+B = "Areefa"
+print("A")
+print("B")
+print("A+B")
