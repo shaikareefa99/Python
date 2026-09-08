@@ -1,0 +1,6 @@
+if 9 > 6 :
+  print("nine is greater than six")
+if 3 < 9 :
+  print("three is less than nine")
+if 14 < 25 :
+  print("fourteen is lessthan than twentyfive")
