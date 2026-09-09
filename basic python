@@ -1,0 +1,7 @@
+length = int(input())
+
+breadth = int(input())
+
+pr = 2* (length+breadth)
+
+print(pr)
