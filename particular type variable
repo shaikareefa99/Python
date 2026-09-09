@@ -1,0 +1,6 @@
+x = 50 # it is the int
+x = "Areefa" # it is the string
+print(x)
+y = 33
+y = "venky"
+print(y)
