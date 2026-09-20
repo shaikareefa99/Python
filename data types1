@@ -1,0 +1,4 @@
+lis=input("apple")
+print((lis+"apple")*3)
+i=input("students")
+print((i+"students")*3)
